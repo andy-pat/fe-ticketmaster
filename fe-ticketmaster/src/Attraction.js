@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Artist = () => {
+const Attraction = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default Artist;
+export default Attraction;
