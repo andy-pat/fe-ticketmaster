@@ -6,6 +6,7 @@ const Search = () => {
     return (
         <div>
         <form>
+        
             <label>Search</label>
             <input type="text" placeholder="type in a Band, Genre or Location"></input>
             <button onClick={() => { api.fetchDetails()}}>Search!</button>

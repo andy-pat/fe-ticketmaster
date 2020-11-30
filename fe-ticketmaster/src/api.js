@@ -6,7 +6,7 @@ export const fetchEvents = () => {
             return res.json()
         })
         .then((data) => {
-            // console.log(data, 'data')
+            
             return data._embedded.events
         })
 }
