@@ -3,6 +3,7 @@ import './App.css';
 import List from './List';
 // import Search from './Search';
 import * as api from './api'
+import { formatEventData } from './utils'
 
 class App extends Component {
 
@@ -26,7 +27,8 @@ class App extends Component {
   componentDidMount() {
     console.log('mounted!')
     api.fetchEvents().then(events => {
-      console.log(events, 'events')
+      const data = formatEventData(events)
+      this.setState({events: data, isLoading: false})
     })
   }
 
@@ -36,7 +38,7 @@ class App extends Component {
     } else
       return (
         <div className="App">
-          <header>TicketMaster API</header>
+          <h1>TicketMaster API</h1>
           {/* <Search /> */}
           <List contents={this.state.events} />
         </div>

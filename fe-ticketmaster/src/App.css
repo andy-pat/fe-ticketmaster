@@ -2,6 +2,58 @@
   text-align: center;
 }
 
+body {
+  text-align: center;
+  height: 1080px;
+  /* background-color: rgb(48, 48, 48); */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(103, 201, 244),
+    yellow
+  );
+}
+
+h1 {
+  text-decoration-line: overline;
+}
+
+.event-card {
+  display: flex;
+  grid-template-columns: auto 30%;
+  flex-wrap: wrap;
+  border: 5px solid #282c34;
+  list-style-type: none;
+  margin: 1rem;
+  justify-content: space-around;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(97, 5, 114, 0.644),
+    rgba(21, 255, 0, 0.698),
+    rgba(69,69,69,0.7)
+  );
+}
+
+.event-card img {
+  width: 40vw
+}
+
+@media screen and (min-width: 480px) {
+  .event-card {
+    display: grid;
+    grid-template-columns: auto 30%;
+    flex-wrap: wrap;
+    border: 5px solid #282c34;
+    list-style-type: none;
+    margin: 1rem;
+    justify-content: space-around;
+  }
+  
+
+  .event-card img {
+    width: 20vw
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
